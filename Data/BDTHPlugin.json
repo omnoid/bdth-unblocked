@@ -2,7 +2,7 @@
   "Author": "heh",
   "Name": "Burning Down the House (unblocked)",
   "Description": "Move around housing items with coordinates and allows you to place anywhere.",
-  "InternalName": "BDTHPlugin_unblocked",
+  "InternalName": "BDTHPlugin",
   "AssemblyVersion": "1.0.0",
   "RepoUrl": "https://github.com/omnoid/bdth-unblocked",
   "ApplicableVersion": "any",
