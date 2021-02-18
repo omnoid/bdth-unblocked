@@ -1,17 +1,17 @@
 {
-  "Author": "LeonBlade",
-  "Name": "Burning Down the House",
+  "Author": "heh",
+  "Name": "Burning Down the House (unblocked)",
   "Description": "Move around housing items with coordinates and allows you to place anywhere.",
-  "InternalName": "BDTHPlugin",
-  "AssemblyVersion": "1.2.4",
-  "RepoUrl": "https://github.com/LeonBlade/BDTHPlugin",
+  "InternalName": "BDTHPlugin_unblocked",
+  "AssemblyVersion": "1.0.0",
+  "RepoUrl": "https://github.com/omnoid/bdth-unblocked",
   "ApplicableVersion": "any",
   "Tags": [
-	"bdth",
-	"housing",
-	"float",
-	"place",
-	"glitch"
+    "bdth",
+    "housing",
+    "float",
+    "place",
+    "glitch"
   ],
   "DalamudApiLevel": 2
 }
