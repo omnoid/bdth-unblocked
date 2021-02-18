@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+	<Version>1.2.4</Version>
+	<TargetFramework>net472</TargetFramework>
+	<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<Reference Include="Dalamud">
+	  <HintPath>$(AppData)\XIVLauncher\addon\Hooks\Dalamud.dll</HintPath>
+	  <Private>False</Private>
+	</Reference>
+	<Reference Include="ImGui.NET">
+	  <HintPath>$(AppData)\XIVLauncher\addon\Hooks\ImGui.NET.dll</HintPath>
+	  <Private>False</Private>
+	</Reference>
+	<Reference Include="ImGuiScene">
+	  <HintPath>$(AppData)\XIVLauncher\addon\Hooks\ImGuiScene.dll</HintPath>
+	  <Private>False</Private>
+	</Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+	<None Include="../Data/BDTHPlugin.json">
+	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</None>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="if $(ConfigurationName) == Release (powershell Compress-Archive -Path '$(ProjectDir)$(OutDir)$(TargetName).json', '$(ProjectDir)$(OutDir)$(TargetName).dll' -DestinationPath '$(ProjectDir)bin\$(TargetName).zip' -Force)" />
+  </Target>
+</Project>
